@@ -2,6 +2,20 @@
 
 A compact binary model format (`.namb`) for [Neural Amp Modeler](https://github.com/sdatkinson/NeuralAmpModelerCore) models.
 
+## tl;dr
+
+```
+> git submodule update --recursive
+> cmake -Bbuild -GNinja .
+> ninja -C build
+> build/nam2namb --slim 0.0 fender-deluxe-reverb.nam test.namb
+SlimmableContainer: slim=0 -> submodel[0] (max_value=0.5)
+fender-deluxe-reverb.nam -> test.namb
+  JSON: 296702 bytes
+  NAMB: 7980 bytes
+  Reduction: 97.3%
+```
+
 ## Motivation
 
 NAM models are distributed as `.nam` files, which are JSON documents containing model configuration and weights encoded as arrays of floating-point numbers in text form. While JSON is convenient and human-readable, it has significant drawbacks in resource-constrained environments:

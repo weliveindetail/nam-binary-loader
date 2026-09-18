@@ -12,8 +12,8 @@ elseif (CMAKE_SYSTEM_NAME STREQUAL "Linux")
   link_libraries(stdc++fs)
 endif()
 
-# Path to NeuralAmpModelerCore (sibling directory by default)
-set(NAM_CORE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/../NeuralAmpModelerCore" CACHE PATH
+# Path to NeuralAmpModelerCore submodule
+set(NAM_CORE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/NeuralAmpModelerCore" CACHE PATH
     "Path to NeuralAmpModelerCore source directory")
 
 if (NOT EXISTS "${NAM_CORE_PATH}/NAM/dsp.h")
